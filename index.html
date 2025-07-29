@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Thread Group | Strategic Consulting - Coming Soon</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom styles for typography and the animated background */
+        body {
+            font-family: 'Inter', sans-serif;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* The main container for the animated background */
+        .background-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        /* The SVG element for the animated thread */
+        #red-thread-svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translateX(-50%) translateY(-50%);
+            opacity: 0.1;
+        }
+
+        /* Animation for the SVG path */
+        .thread-path {
+            stroke-dasharray: 2000;
+            stroke-dashoffset: 2000;
+            animation: draw-thread 15s ease-in-out infinite alternate;
+        }
+
+        @keyframes draw-thread {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+        
+        /* Add a subtle fade-in animation for content */
+        .fade-in {
+            animation: fade-in-up 1s ease-out forwards;
+            opacity: 0;
+        }
+        
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Apply animation delays to create a staggered effect */
+        .fade-in-delay-1 { animation-delay: 0.2s; }
+        .fade-in-delay-2 { animation-delay: 0.4s; }
+        .fade-in-delay-3 { animation-delay: 0.6s; }
+        .fade-in-delay-4 { animation-delay: 0.8s; }
+        .fade-in-delay-5 { animation-delay: 1.0s; }
+        .fade-in-delay-6 { animation-delay: 1.2s; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Animated Background -->
+    <div class="background-wrapper">
+        <svg id="red-thread-svg" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+            <path class="thread-path" d="M-200 400 Q 100 100 400 400 T 1000 400 Q 1300 700 1640 400" stroke="#B91C1C" fill="none" stroke-width="2"/>
+        </svg>
+    </div>
+
+    <div class="relative min-h-screen flex flex-col items-center justify-center p-6 sm:p-8 lg:p-12">
+        <main class="w-full max-w-4xl mx-auto text-center">
+            
+            <!-- Header Section -->
+            <header class="mb-12">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight fade-in">
+                    Red Thread Group
+                </h1>
+                <p class="mt-3 text-lg md:text-xl text-red-700 font-semibold fade-in fade-in-delay-1">
+                    Weaving Strategy into Action.
+                </p>
+            </header>
+
+            <!-- Main Content Section -->
+            <div class="mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 fade-in fade-in-delay-2">Our New Website is Launching Soon</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-base md:text-lg text-gray-600 fade-in fade-in-delay-3">
+                    We're finding the 'red thread' that connects your <strong class="font-semibold text-gray-800">business strategy</strong> to your daily <strong class="font-semibold text-gray-800">operations</strong>. Our expertise lies in untangling complexity through workflow improvement, creating remarkable efficiency, and minimizing waste.
+                </p>
+            </div>
+
+            <!-- Services Section -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 text-left fade-in fade-in-delay-4">
+                <!-- Service Card 1: Strategy & Operations -->
+                <div class="bg-white/60 backdrop-blur-sm p-6 rounded-xl shadow-sm border border-gray-200/80">
+                    <h3 class="text-lg font-semibold text-gray-900">Strategy & Operations</h3>
+                    <p class="mt-2 text-sm text-gray-600">Aligning high-level goals with on-the-ground execution for seamless performance.</p>
+                </div>
+                <!-- Service Card 2: Workflow & Efficiency -->
+                <div class="bg-white/60 backdrop-blur-sm p-6 rounded-xl shadow-sm border border-gray-200/80">
+                    <h3 class="text-lg font-semibold text-gray-900">Workflow & Efficiency</h3>
+                    <p class="mt-2 text-sm text-gray-600">Optimizing processes to reduce wasted workhours and boost productivity.</p>
+                </div>
+                <!-- Service Card 3: Internal Auditing -->
+                <div class="bg-white/60 backdrop-blur-sm p-6 rounded-xl shadow-sm border border-gray-200/80">
+                    <h3 class="text-lg font-semibold text-gray-900">Internal Auditing</h3>
+                    <p class="mt-2 text-sm text-gray-600">Providing clear insights into your operations to identify risks and opportunities.</p>
+                </div>
+                <!-- Service Card 4: Documentation -->
+                <div class="bg-white/60 backdrop-blur-sm p-6 rounded-xl shadow-sm border border-gray-200/80 sm:col-span-2 lg:col-span-3">
+                     <h3 class="text-lg font-semibold text-gray-900">Process Documentation</h3>
+                    <p class="mt-2 text-sm text-gray-600">Creating clear, concise, and actionable documentation that empowers your team and ensures consistency.</p>
+                </div>
+            </div>
+
+            <!-- Contact/Call to Action -->
+            <div class="mt-16 fade-in fade-in-delay-5">
+                <h3 class="text-xl font-bold text-gray-800">Stay Updated</h3>
+                <p class="mt-2 text-gray-600">Be the first to know when we go live.</p>
+                <div class="mt-6 flex justify-center">
+                    <a href="mailto:contact@redthreadgroup.com" 
+                       class="inline-block bg-red-700 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-gray-50 transition-all duration-300">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="absolute bottom-6 text-center w-full fade-in fade-in-delay-6">
+            <p class="text-sm text-gray-500">&copy; 2025 Red Thread Group. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
